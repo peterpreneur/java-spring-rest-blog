@@ -80,4 +80,14 @@ public class Post {
         return this.title.equals(otherPost.getTitle()) &&
                this.body.equals(otherPost.getBody());
     }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Author author;
+    public Author getAuthor(Author author) {
+        return author;
+    }
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
 }
